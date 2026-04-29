@@ -50,7 +50,7 @@ def train_model(dataset_path, save_path="speaker_model.joblib", test_size=0.2):
                                    random_state=42)
     model.fit(X_train_scaled, y_train)
     acc = accuracy_score(y_test, model.predict(X_test_scaled))
-    print(f"🎯 Accuracy: {acc*100:.2f}%")
+    print(f" Accuracy: {acc*100:.2f}%")
     joblib.dump({"model": model, "scaler": scaler, "accuracy": acc, "X_train": X_train, "y_train": y_train}, save_path)
     print(f"Model saved as {save_path}")
     return model, scaler, acc, X_train, y_train
