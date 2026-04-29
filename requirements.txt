@@ -1,0 +1,1 @@
+pip install numpy scipy librosa matplotlib scikit-learn joblib customtkinter seaborn
